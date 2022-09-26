@@ -82,4 +82,10 @@ public class PlayerController : MonoBehaviour {
     {
         speed = speeds[change.value];
     }
+    
+    public int[] Speeds
+    {
+        get => speeds;
+        set => speeds = value;
+    }
 }
