@@ -57,6 +57,12 @@ public class PlayerController : MonoBehaviour {
             // Run the 'SetCountText()' function (see below)
             SetCountText ();
         }
+        
+        else if (other.gameObject.CompareTag ("PickUpBAD"))
+        {
+            other.gameObject.SetActive (false);
+            //ich brauch Benzin
+        }
     }
 
     void OnMove(InputValue value)
