@@ -57,6 +57,12 @@ public class PlayerController : MonoBehaviour {
             // Run the 'SetCountText()' function (see below)
             SetCountText ();
         }
+        
+        else if (other.gameObject.CompareTag ("PickUpBAD"))
+        {
+            other.gameObject.SetActive (false);
+            EventManager.InvokeBadPickupEvent();
+        }
     }
 
     void OnMove(InputValue value)
@@ -81,5 +87,11 @@ public class PlayerController : MonoBehaviour {
     public void SetSpeed(TMP_Dropdown change)
     {
         speed = speeds[change.value];
+    }
+    
+    public int[] Speeds
+    {
+        get => speeds;
+        set => speeds = value;
     }
 }
