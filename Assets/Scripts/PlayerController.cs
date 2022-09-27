@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour {
         else if (other.gameObject.CompareTag ("PickUpBAD"))
         {
             other.gameObject.SetActive (false);
-            //ich brauch Benzin
+            EventManager.InvokeBadPickupEvent();
         }
     }
 
